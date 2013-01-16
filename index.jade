@@ -17,10 +17,10 @@ html
       .container
         .row.jumbotron
           .span12
-            //- video(width='100%', height='auto', autoplay, poster="assets/jumbotron-poster.jpg")
-            //-   source(src='assets/jumbotron.mp4', type='video/mp4')
+            video(width='100%', height='auto', autoplay, poster="assets/jumbotron.jpg")
+              source(src='assets/webmovie.mp4', type='video/mp4')
               
-            img(src="assets/jumbotron.jpg")
+            //- img(src="assets/jumbotron.jpg")
 
         .row
           //- .arrow-sprites
@@ -59,7 +59,7 @@ html
       .upper
         .container
           .row
-            .span12
+            .span12.headline
               h1 När fullmånen står som högst, då fångar vi dina kräftor
       .lower
         .container
@@ -160,58 +160,69 @@ html
 
             p När du bestämt dig för att beställa kräftor från Svensk Kräfta kan du göra det antingen genom att fylla i beställningsformuläret eller ringa oss på <b>08-723 1000</b>. Vid beställning av minst 5 kilo ingår fri leverans.
               
-            h3 Våra kräftor
+            h2 Våra kräftor
 
             p Vi serverar endast de största och finaste kräftorna, och har därför endast två storlekar på våra kräftor: större och jumbo.
 
-            h4 Större kräftor
+            div.crayprice
+              strong Större kräftor 
 
-            p 16 - 21 st/kg, 329 kr/kg
+              span 16 - 21 st/kg, 329 kr/kg
 
-            h4 Jumbokräftor
+              br
 
-            p 7 - 10 st/kg, 495 kr/kg
+              strong Jumbokräftor 
+
+              span 7 - 10 st/kg, 495 kr/kg
 
             h2 Nyhetsbrev
 
             form#mc.validate(action='http://svenskkrafta.us5.list-manage.com/subscribe/post?u=7edd44807a38ef0c1f1d4709a&id=26e7eb4235', method='post', name='mc-embedded-subscribe-form', target='_blank', novalidate='novalidate')
               label(for='mc-email') Prenumerera på vårt nyhetsbrev för de senaste erbjudandena.
-              input#mc-email.email(type='email', value='', name='EMAIL', placeholder='E-mail', required='required')
-              input.btn(type='submit', value='Prenumerera', name='subscribe')
+              .control-group
+                .controls
+                  input#mc-email.email(type='email', value='', name='EMAIL', placeholder='E-mail', required='required')
+              .control-group
+                .controls
+                  input.btn(type='submit', value='Prenumerera', name='subscribe')
           .span8
-            h2 Beställ våra kräftor online(kommer snart)
+            h2 Beställ våra kräftor online
             form#order.form-horizontal
               .control-group
                 label.control-label Fullständigt namn
                 .controls
-                  input.span3(disabled, type='text')
+                  input.span3(type='text')
               .control-group
                 label.control-label Adress
                 .controls
-                  input.span3(disabled, type='text')
+                  input.span3(type='text')
                   span.help-block ex. Kräftgatan 10 A, 837 62, Stockholm
               .control-group
                 label.control-label Telefonnummer
                 .controls
-                  input.span3(disabled, type='text')
+                  input.span3(type='text')
               .control-group
                 label.control-label E-post
                 .controls
-                  input.span3(disabled, type='text')
+                  input.span3(type='text')
               .control-group
                 label.control-label Antal kilo
                 .controls
-                  input.span3(disabled, type='text')
+                  input.span3(type='text')
+              .control-group
+                .controls
+                  input.btn(type='submit', value='Beställ', name='order')
 
 
     .sixth
       .container.clearfix
-        img(src='assets/logo.png')
+        div
+          .left
+            p Svensk Kräfta
+            p info@svenskkrafta.se
+            p 08-273 10 00
 
-        .right
-          p Svensk Kräfta
-          p info@svenskkrafta.se
-          p 08-273 10 00
+          img(src='assets/logo.png')
 
     script(type="text/javascript")
       !{script}

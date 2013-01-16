@@ -26,7 +26,11 @@ h1 {
 
 h2 {
   font-size: 28px;
-  line-height: 36px;
+  line-height: 30px;
+}
+
+h3 {
+  line-height: 30px;
 }
 
 h4 {
@@ -37,7 +41,7 @@ h2, h3, h4, p {
   margin: 6px 23px 0 23px;
 }
 
-p {
+p, span, strong {
   line-height: 18px;
 }
 
@@ -99,7 +103,8 @@ p {
       h1 {
         font-size: 10em;
         color: #cb2727;
-        margin: 0.1em 0;
+        margin: 6px 0 -24px 0;
+        text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.75);
       }
 
       h3 {
@@ -178,6 +183,10 @@ p {
     margin: 0;
   }
 
+  p {
+    margin-top: 6px;
+  }
+
   .upper {
     border-bottom: 1px dashed #1c2635;
     background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.25), rgba(0,0,0,0.1));
@@ -247,6 +256,10 @@ p {
 
   h2, h3, h4, p {
     margin: 0;
+  }
+
+  p {
+    margin-top: 6px;
   }
 
   .upper {
@@ -324,6 +337,10 @@ p {
 
   h2, h3, h4, p {
     margin: 0;
+  }
+
+  p {
+    margin-top: 6px;
   }
 
   .upper {
@@ -414,25 +431,44 @@ p {
     background-color: white;
     border-left: 1px solid #e2e2e2;
     border-right: 1px solid #e2e2e2;
+    padding-top: 25px;
 
     .enlighten {
       margin-bottom: 1em;
+      .crayprice {
+        margin: 0 23px 10px 23px;
+      }
     }
 
-    h2 {
-      padding-top: 25px;
-    }
-
-    #mc {
-      margin: 6px 23px 0 23px;
-
-      label {
-        font-size: 13px;
+    .form-horizontal { 
+      .control-group {
+        margin-bottom: 10px;
+      }
+      .help-block {
+        margin-top: 5px;
+        color: #8C8C8C;
       }
     }
 
     #order {
-      padding: 0 28px 0 28px;
+      margin-top: 8px;
+    }
+
+    p {
+      margin-top: 2px;
+      margin-bottom: 10px;
+    }
+
+    #mc {
+      margin: 0 23px 0 23px;
+
+      label {
+        font-size: 13px;
+      }
+
+      .control-group {
+        margin-bottom: 0;
+      }
     }
   }
 }
@@ -445,18 +481,26 @@ p {
     border-left: 1px solid #202e3e;
     border-right: 1px solid #202e3e;
 
-    img {
-      margin-left: 15px;
+    > div {
       height: 100px;
-      float: left;
     }
 
-    .right {
+    img {
+      position: absolute;
+      left: 50%;
+      width: 321px;
+      margin-left: -160px;
+    }
+
+    .left {
       text-shadow: 0 1px 0 black;
-      margin-top: 11px;
+      margin-top: 19px;
       color: white;
-      float: right;
-      text-align: right;
+      float: left;
+
+      p {
+        margin-top: 2px;
+      }
     }
   }
 }
@@ -498,6 +542,12 @@ p {
     margin-right: 20px;
   }
 }
+  /* Large desktop */
+  @media (min-width: 1200px) {
+   .second .headline {     
+      width: 940px
+    }
+  }
 
 @media (min-width: 768px) and (max-width: 979px) {
   .second .lower .container .lake img {
@@ -513,5 +563,11 @@ p {
     -moz-transform: rotatez(-4deg);
     -ms-transform: rotatez(-4deg);
     transform: rotatez(-4deg);
+  }
+}
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  #order {
+    padding: 0 28px 0 28px;
   }
 }
