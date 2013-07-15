@@ -7,14 +7,17 @@ body {
 }
 
 @font-face {
-  font-family: CheltenhamStd;
-  src: url("assets/CheltenhamStd-UltraCondIt.otf") format("opentype");
-  font-style: italic;
+    font-family: 'CheltenhamStd';
+    src: url('assets/cheltenhamstd-ultracondit.eot');
+    src: url('assets/cheltenhamstd-ultracondit.eot') format('embedded-opentype'),
+         url('assets/cheltenhamstd-ultracondit.woff') format('woff'),
+         url('assets/cheltenhamstd-ultracondit.ttf') format('truetype'),
+         url('assets/cheltenhamstd-ultracondit.svg#CheltenhamStd') format('svg');
+
 }
 
 h1, h2, h3 {
   font-family: CheltenhamStd, serif;
-  font-style: italic;
   font-weight: lighter;
 }
 
@@ -70,7 +73,17 @@ p, span, strong {
     border-right: 1px solid #e2e2e2;
 
     & > .jumbotron video, & > .jumbotron img {
+      position: relative;
+    }
+
+    #jumbo-video {
       border-bottom: 5px solid #cb2727;
+    }
+
+    #mute {
+      position: absolute;
+      top: 10px
+      left: 10px;
     }
 
     .quality {
@@ -452,6 +465,8 @@ p, span, strong {
 
     #order {
       margin-top: 8px;
+      margin-left: 23px;
+      margin-bottom: 20px;
     }
 
     p {
@@ -567,7 +582,5 @@ p, span, strong {
 }
 /* Landscape phones and down */
 @media (max-width: 480px) {
-  #order {
-    padding: 0 28px 0 28px;
-  }
+
 }

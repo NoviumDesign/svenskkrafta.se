@@ -11,16 +11,29 @@ html
 
     link(rel="stylesheet", href="style.css")
     meta(name="viewport",content="width=device-width, initial-scale=1.0")
+    link(href="http://vjs.zencdn.net/4.0/video-js.css", rel="stylesheet")
+
+    script(src="http://vjs.zencdn.net/4.0/video.js")
 
   body
     .first
       .container
         .row.jumbotron
           .span12
-            video(width='100%', height='auto', autoplay, poster="assets/jumbotron.jpg")
-              source(src='assets/webmovie.mp4', type='video/mp4')
+            //- video(width='100%', height='auto', autoplay, poster="assets/jumbotron.jpg")
+            //-   source(src='assets/webmovie.mp4', type='video/mp4')
+
+
+            video(id="jumbo-video", class="video-js vjs-default-skin", preload="auto", width="100%", height="auto", poster="assets/jumbotron-poster.jpg", data-setup='{"example_option":true}', autoplay, controls)
+              source(src="assets/jumbotron.mp4", type='video/mp4')
+              //- source(src="http://video-js.zencoder.com/oceans-clip.webm", type='video/webm')
+              //- source(src="http://video-js.zencoder.com/oceans-clip.ogv", type='video/ogg')
+              img(src="assets/jumbotron-poster.jpg")
               
-            //- img(src="assets/jumbotron.jpg")
+            //- button(id="mute")
+            //-   | Ljud av
+            //- button(id="play-pause")
+            //-   | Spela
 
         .row
           //- .arrow-sprites
@@ -158,7 +171,7 @@ html
           .span4.enlighten
             h2 Förgyll din kräftskiva
 
-            p När du bestämt dig för att beställa kräftor från Svensk Kräfta kan du göra det antingen genom att fylla i beställningsformuläret eller ringa oss på <b>08-723 1000</b>. Vid beställning av minst 5 kilo ingår fri leverans.
+            p När du bestämt dig för att beställa kräftor från Svensk Kräfta kan du göra det antingen genom att fylla i beställningsformuläret på vår ordersida eller ringa oss på <b>08-723 1000</b>. Vid beställning av minst 5 kilo ingår fri leverans.
               
             h2 Våra kräftor
 
@@ -187,32 +200,7 @@ html
                   input.btn(type='submit', value='Prenumerera', name='subscribe')
           .span8
             h2 Beställ våra kräftor online
-            form#order.form-horizontal
-              .control-group
-                label.control-label Fullständigt namn
-                .controls
-                  input.span3(type='text')
-              .control-group
-                label.control-label Adress
-                .controls
-                  input.span3(type='text')
-                  span.help-block ex. Kräftgatan 10 A, 837 62, Stockholm
-              .control-group
-                label.control-label Telefonnummer
-                .controls
-                  input.span3(type='text')
-              .control-group
-                label.control-label E-post
-                .controls
-                  input.span3(type='text')
-              .control-group
-                label.control-label Antal kilo
-                .controls
-                  input.span3(type='text')
-              .control-group
-                .controls
-                  input.btn(type='submit', value='Beställ', name='order')
-
+            a.btn.btn-primary.btn-large#order(href="http://order.marob.se/request-order/start/dfg7586ghf/54y645cfy4") Till beställningen
 
     .sixth
       .container.clearfix
@@ -220,9 +208,8 @@ html
           .left
             p Svensk Kräfta
             p info@svenskkrafta.se
-            p 08-273 10 00
+            p 08-723 10 00
 
           img(src='assets/logo.png')
-
-    script(type="text/javascript")
-      !{script}
+    script(src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js")
+    script(src="script.js")
