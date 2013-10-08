@@ -16,24 +16,24 @@ html
     script(src="http://vjs.zencdn.net/4.0/video.js")
 
   body
-    .first
+    .next
+    .first.visualsection
       .container
         .row.jumbotron
           .span12
             //- video(width='100%', height='auto', autoplay, poster="assets/jumbotron.jpg")
             //-   source(src='assets/webmovie.mp4', type='video/mp4')
-
-
-            video(id="jumbo-video", class="video-js vjs-default-skin", preload="auto", width="100%", height="auto", poster="assets/jumbotron-poster.jpg", data-setup='{"example_option":true}', autoplay, controls)
-              source(src="assets/jumbotron.mp4", type='video/mp4')
-              //- source(src="http://video-js.zencoder.com/oceans-clip.webm", type='video/webm')
-              //- source(src="http://video-js.zencoder.com/oceans-clip.ogv", type='video/ogg')
-              img(src="assets/jumbotron-poster.jpg")
-              
-            //- button(id="mute")
-            //-   | Ljud av
-            //- button(id="play-pause")
-            //-   | Spela
+            .jumbotron-wrapper
+              video(id="jumbo-video", class="video-js vjs-default-skin", preload="auto", width="100%", height="auto", poster="assets/jumbotron-poster.jpg", data-setup='{}', controls)
+                source(src="assets/jumbotron.mp4", type='video/mp4')
+                //- source(src="http://video-js.zencoder.com/oceans-clip.webm", type='video/webm')
+                //- source(src="http://video-js.zencoder.com/oceans-clip.ogv", type='video/ogg')
+                img(src="assets/jumbotron-poster.jpg")
+                
+              //- button(id="mute")
+              //-   | Ljud av
+              //- button(id="play-pause")
+              //-   | Spela
 
         .row
           //- .arrow-sprites
@@ -60,6 +60,10 @@ html
 
                 p
                   iframe(src='//www.facebook.com/plugins/like.php?href=https%3A%2F%2Ffacebook.com%2Fpages%2FSvensk-Kr%C3%A4fta%2F121943464565062&send=false&layout=button_count&width=150&show_faces=false&action=recommend&colorscheme=light&font=arial&height=21', scrolling='no', frameborder='0', style='border: none; overflow: hidden; width: 150px; height: 21px;', allowtransparency='true')
+              .span4
+                h2#contact-us Beställ kräftor online
+                p
+                  a.btn.btn-primary.btn-large#order(href="http://order.marob.se/request-order/start/dfg7586ghf/54y645cfy4") Till beställningen
           .span4.countdown.hidden-phone
             h2#countdown_info Säsongen börjar om
 
@@ -68,7 +72,7 @@ html
 
             img(src="assets/party-3.jpg")
 
-    .second.hidden-phone
+    .second.hidden-phone.visualsection
       .upper
         .container
           .row
@@ -98,7 +102,7 @@ html
               h2 Klassiska metoder och genuin matlagningskonst
 
               p Vi på Svensk Kräfta tror inte på industriellt produktion och massfiske. Vi står inte för den största volymen kräftor per år, men kanske den med högst kvalité. Med klassiska metoder och en genuin matlagningstradition levererar vi endast de bästa kräftorna. Vi tror att ni - precis som vi, kommer att uppskatta smaken av äkta, klassiskt fiske.
-    .third.hidden-phone
+    .third.hidden-phone.visualsection
       .upper
         .container
           .row
@@ -127,7 +131,7 @@ html
               h2 Frakt i kylbil garanterar färska kräftor till dörren
 
               p Vi levererar era kräftor ända fram till dörren, direkt från vårt kokeri. Detta garanterar er de bästa och färskaste kräftorna ni kan få tag på. Leverans ingår i hela stockholmsområdet vid beställning av minst 5 kg kräftor.
-    .fourth.hidden-phone
+    .fourth.hidden-phone.visualsection
       .upper
         .container
           .row
@@ -165,13 +169,13 @@ html
             .span4.photo
               img(src="assets/crayfish-2.jpg").right
 
-    .fifth
+    .fifth.visualsection
       .container
         .row
           .span4.enlighten
             h2 Förgyll din kräftskiva
 
-            p När du bestämt dig för att beställa kräftor från Svensk Kräfta kan du göra det antingen genom att fylla i beställningsformuläret på vår ordersida eller ringa oss på <b>08-723 1000</b>. Vid beställning av minst 5 kilo ingår fri leverans.
+            p När du bestämt dig för att beställa kräftor från Svensk Kräfta kan du göra det antingen genom att fylla i beställningsformuläret på vår ordersida eller ringa oss på <b>08-723 10 00</b>. Vid beställning av minst 5 kilo ingår fri leverans.
               
             h2 Våra kräftor
 
@@ -180,7 +184,7 @@ html
             div.crayprice
               strong Större kräftor 
 
-              span 16 - 21 st/kg, 329 kr/kg
+              span 16 - 21 st/kg, 349 kr/kg
 
               br
 
@@ -200,6 +204,7 @@ html
                   input.btn(type='submit', value='Prenumerera', name='subscribe')
           .span8
             h2 Beställ våra kräftor online
+            p För att säkerställa vår kvalité och service ser vi helst att ni beställer era kräftor senast en vecka innan leverans. Vid akut behov, kontakta oss via telefon. Givetvis kommer vi göra allt vi kan för att ni ska få en lyckad kräftskiva. Leveranser körs torsdagar - lördagar mellan 08.00 och 18.00.
             a.btn.btn-primary.btn-large#order(href="http://order.marob.se/request-order/start/dfg7586ghf/54y645cfy4") Till beställningen
 
     .sixth

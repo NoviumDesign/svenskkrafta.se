@@ -40,6 +40,13 @@
 
 // });
 
+var vid = videojs("jumbo-video");
+vid.on("ended", function(){
+    vid.posterImage.show();
+    vid.bigPlayButton.show();
+    vid.currentTime(0);
+});
+
 var _gaq = _gaq || [];
 
 _gaq.push(['_setAccount', 'UA-32252579-1']);
